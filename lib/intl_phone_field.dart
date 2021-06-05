@@ -290,8 +290,10 @@ class _IntlPhoneFieldState extends State<IntlPhoneField> {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
-        Center(child:_buildFlagsButton()),
-        SizedBox(width: 8),
+        Padding(
+          padding:EdgeInsets.all(8),
+          child:_buildFlagsButton()
+        ),
         Expanded(
           child: TextFormField(
             initialValue: widget.initialValue,
